@@ -48,3 +48,8 @@ variable "jenkins_role_arn" {
   type        = string
 }
 
+variable "bastion_role_arn" {
+  description = "IAM role ARN for Bastion host to access EKS"
+  type        = string
+}
+

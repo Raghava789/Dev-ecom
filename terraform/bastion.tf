@@ -3,6 +3,7 @@ resource "aws_instance" "bastion_host" {
   instance_type          = var.instance_type
   key_name               = var.ec2_ssh_key_name
   vpc_security_group_ids = [aws_security_group.allow_user_bastion.id]
+  iam_instance_profile = aws_iam_instance_profile.bastion_profile.name
   subnet_id = module.vpc.public_subnet_ids[0]
   user_data              = file("${path.module}/bastion_user_data.sh")
   tags = {
