@@ -67,3 +67,13 @@ variable "bastion_sg" {
 variable "ec2_ssh_key_name" {
   description = "ssh key name"
 }
+
+variable "cluster_addons" {
+  description = "Map of EKS addons to enable"
+  type = map(object({
+    addon_version                = optional(string)
+    resolve_conflicts_on_create = optional(string, "OVERWRITE")
+    resolve_conflicts_on_update = optional(string, "OVERWRITE")
+    service_account_role_arn    = optional(string)
+  }))
+}

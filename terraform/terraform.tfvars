@@ -21,3 +21,11 @@ eks_node_group = {
 }
 
 #jenkins_role_arn = "arn:aws:iam::123456789012:role/jenkins-eks-role"  # Update with your actual role ARN
+
+
+cluster_addons = {
+  coredns = {}
+  kube-proxy = {}
+  vpc-cni = {}
+}
+

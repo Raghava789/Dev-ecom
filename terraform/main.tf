@@ -34,6 +34,7 @@ module "eks" {
     source_security_group_ids = [aws_security_group.node_group_remote_access.id]
   }
 
+  cluster_addons = var.cluster_addons
 
   jenkins_role_arn = aws_iam_role.jenkins_eks_role.arn
 }
