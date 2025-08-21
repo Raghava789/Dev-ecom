@@ -27,6 +27,7 @@ module "eks" {
 
   eks_node_group = var.eks_node_group
   bastion_role_arn = aws_iam_role.bastion_role.arn
+  
 
   # Optional: remote access
   remote_access_config = {

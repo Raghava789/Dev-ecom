@@ -77,3 +77,4 @@ variable "cluster_addons" {
     service_account_role_arn    = optional(string)
   }))
 }
+
