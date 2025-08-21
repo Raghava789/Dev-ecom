@@ -12,6 +12,7 @@ terraform {
     region = "ap-south-1"
     #dynamodb_table = "state-lock-dynamodb-table"
     encrypt = true
+    use_lockfile = true
   }
 }
 
